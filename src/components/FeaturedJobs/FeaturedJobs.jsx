@@ -13,7 +13,7 @@ const FeaturedJobs = () => {
 
   const handleSeeAll = () => {
     setSeeAll(true);
-  }
+  };
   return (
     <div>
       <div className="mb-10">
@@ -30,11 +30,16 @@ const FeaturedJobs = () => {
           <Job key={job.id} job={job}></Job>
         ))}
       </div>
-      <div className="text-center mx-auto mb-10">
-        <button onClick={handleSeeAll} className="nav-btn py-3 px-6 text-white font-extrabold">
-          See All Jobs
-        </button>
-      </div>
+      {!seeAll && (
+        <div className="text-center mx-auto mb-10">
+          <button
+            onClick={handleSeeAll}
+            className="nav-btn py-3 px-6 text-white font-extrabold"
+          >
+            See All Jobs
+          </button>
+        </div>
+      )}
     </div>
   );
 };

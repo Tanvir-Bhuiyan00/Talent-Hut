@@ -21,8 +21,7 @@ const Banner = () => {
         <div className="w-full lg:absolute right-0 lg:right-14 bottom-0 banner-img order-1 lg:order-2 mt-8 lg:mt-14">
           <img
             className="image-full w-full"
-            src="../../../public/All Images/P3OLGJ1 copy 1.png"
-            alt=""
+            src="https://i.ibb.co/925YYTw/P3-OLGJ1-copy-1.png" alt="" 
           />
         </div>
       </div>

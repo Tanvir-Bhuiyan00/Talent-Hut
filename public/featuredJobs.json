@@ -12,7 +12,10 @@
     "jobResponsibility": "You'll be responsible for designing and implementing new features in our flagship product.",
     "educationalRequirements": "Bachelor's degree in Computer Science or related field",
     "experiences": "5+ years of experience in software engineering",
-    "contactInformation": "Please send your resume to jobs@google.com"
+    "contactInformation": {
+      "phone": "(555) 123-4567",
+      "email": "googlemail@gmail.com"
+    }
   },
   {
     "id": "2",
@@ -27,7 +30,10 @@
     "jobResponsibility": "You'll be responsible for defining and driving the product roadmap for our e-commerce platform.",
     "educationalRequirements": "Bachelor's degree in business, marketing, or related field",
     "experiences": "7+ years of experience in product management",
-    "contactInformation": "Please send your resume to jobs@amazon.com"
+    "contactInformation": {
+      "phone": "(555) 987-6543",
+      "email": "amazon@gmail.com"
+    }
   },
   {
     "id": "3",
@@ -42,7 +48,10 @@
     "jobResponsibility": "You'll be responsible for analyzing large data sets to identify trends and insights to drive business decisions.",
     "educationalRequirements": "Bachelor's degree in statistics, mathematics, computer science, or related field",
     "experiences": "3+ years of experience in data analysis",
-    "contactInformation": "Please send your resume to jobs@facebook.com"
+    "contactInformation": {
+      "phone": "(555) 555-1212",
+      "email": "facebook@gmail.com"
+    }
   },
   {
     "id": "4",
@@ -57,10 +66,13 @@
     "jobResponsibility": "You'll be responsible for designing and iterating on user interfaces for our products.",
     "educationalRequirements": "Bachelor's degree in design or related field",
     "experiences": "5+ years of experience in UX design",
-    "contactInformation": "Please send your resume to jobs@apple-music.com"
+    "contactInformation": {
+      "phone": "(555) 867-5309",
+      "email": "applemusic@gmail.com"
+    }
   },
   {
-    "id": 5,
+    "id": "5",
     "companyLogo": "./Logo/netflix-4 1.png",
     "jobTitle": "Senior Product Designer",
     "companyName": "Netflix",
@@ -72,10 +84,13 @@
     "jobResponsibility": "-Design and improve the user experience of our streaming platform across multiple devices.\n-Collaborate with cross-functional teams to develop and execute design strategies.\n-Create wireframes, prototypes, and high-fidelity mockups.\n-Perform user research and usability testing.\n-Stay up-to-date with industry trends and best practices.",
     "educationalRequirements": "Bachelor's or Master's degree in design-related field.\n-Strong portfolio demonstrating experience designing complex systems across multiple devices.\n-Excellent communication and collaboration skills.\n-Proficiency in design tools such as Sketch, Figma, or Adobe Creative Suite.",
     "experiences": "Minimum 5 years of experience in product design or UX/UI design.\n-Experience working on streaming platforms or other digital media products is a plus.",
-    "contactInformation": "To apply for this position, please send your resume and portfolio to careers@netflix.com."
+    "contactInformation": {
+      "phone": "(555) 246-8101",
+      "email": "netfli@gmail.com"
+    }
   },
   {
-    "id": 6,
+    "id": "6",
     "companyLogo": "./Logo/samsung-logo.png",
     "jobTitle": "Marketing Manager",
     "companyName": "Samsung",
@@ -87,10 +102,13 @@
     "jobResponsibility": "- Develop and implement marketing strategies to promote Samsung's products and services\n- Collaborate with cross-functional teams to ensure alignment of marketing efforts\n- Analyze and report on the performance of marketing campaigns\n- Manage a team of marketing professionals\n- Stay up-to-date with industry trends and best practices",
     "educationalRequirements": "Bachelor's degree in marketing or a related field",
     "experiences": "5+ years of experience in marketing, with at least 2 years in a management role",
-    "contactInformation": "To apply, please send your resume and cover letter to careers@samsung.com"
+    "contactInformation": {
+      "phone": "(555) 369-1478",
+      "email": "samsung@gmail.com"
+    }
   },
   {
-    "id": 7,
+    "id": "7",
     "companyLogo": "./Logo/cocacola-logo.png",
     "jobTitle": "Software Engineer",
     "companyName": "CocaCola",
@@ -102,10 +120,13 @@
     "jobResponsibility": "Responsibilities include designing and implementing software solutions, writing and maintaining code, collaborating with cross-functional teams, and ensuring high-quality software products.",
     "educationalRequirements": "Bachelor's or Master's degree in Computer Science or related field.",
     "experiences": "5+ years of experience in software engineering.",
-    "contactInformation": "To apply, please send your resume and cover letter to careers@cocacola.com."
+    "contactInformation": {
+      "phone": "(555) 777-9311",
+      "email": "cocacola@gmail.com"
+    }
   },
   {
-    "id": 8,
+    "id": "8",
     "companyLogo": "./Logo/tesla-9 1.png",
     "jobTitle": "Software Engineer",
     "companyName": "Tesla",
@@ -117,6 +138,9 @@
     "jobResponsibility": "Responsibilities include designing and implementing software solutions, testing and debugging code, and collaborating with team members.",
     "educationalRequirements": "Bachelor's degree in Computer Science or related field.",
     "experiences": "3+ years of experience in software engineering.",
-    "contactInformation": "Please send your resume to jobs@tesla.com"
+    "contactInformation": {
+      "phone": "(555) 444-8888",
+      "email": "tesla@gmail.com"
+    }
   }
 ]

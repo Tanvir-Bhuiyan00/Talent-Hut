@@ -1,5 +1,6 @@
 import React from "react";
 import "./Job.css";
+import { Link } from "react-router-dom";
 const Job = ({ job }) => {
   const {
     id,
@@ -36,15 +37,23 @@ const Job = ({ job }) => {
         </div>
         <div className="job-text-color md:flex gap-20 font-semibold text-base mt-4">
           <div className="flex gap-1 mb-3">
-            <img src="../../../public/Icons/Location Icon.png" alt="" />
+            <img src="https://i.ibb.co/7b6Vb11/Location-Icon.png" alt="" />
             <p>{location}</p>
           </div>
           <div className="flex gap-1">
-            <img className="w-6 h-6" src="../../../public/Icons/Frame.png" alt="" />
+            <img
+              className="w-6 h-6"
+              src="https://i.ibb.co/2N8b3zp/Frame.png"
+              alt=""
+            />
             <p>{salary}</p>
           </div>
         </div>
-        <button className="nav-btn py-3 px-6 text-white font-extrabold mt-8">View Details</button>
+        <Link
+          to={`details/${id}`}
+        >
+          <button className="nav-btn py-3 px-6 text-white font-extrabold mt-8">View Details</button>
+        </Link>
       </div>
     </div>
   );
