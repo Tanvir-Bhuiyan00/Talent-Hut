@@ -33,7 +33,6 @@ const Header = () => {
         </button>
       </nav>
 
-      {/*After icon was clicked */}
 
       <div className={`md:hidden ${showMenu ? "block" : "hidden"} ml-5`}>
         <Link className="block py-2" to="/">

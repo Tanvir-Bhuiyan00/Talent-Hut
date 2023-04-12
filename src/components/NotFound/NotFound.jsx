@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  
   return (
     <div className="mx-4 md:mx-40 text-center mt-10 md:mt-40">
       <div className="">
