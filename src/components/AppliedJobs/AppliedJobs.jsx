@@ -5,6 +5,8 @@ import JobCard from "../JobCard/JobCard";
 const AppliedJobs = () => {
   const appliedJobs = useLoaderData();
   const [jobs, setJobs] = useState(appliedJobs);
+
+
   return (
     <div className="mb-32">
       <div className="text-center pt-12 pb-32 navbar-background mb-20 md:mb-32">
@@ -23,12 +25,14 @@ const AppliedJobs = () => {
       </div>
       <div className="mx-4 md:mx-40">
         <div className="text-right mb-8">
-          <select className="select select-bordered w-36">
+          <select
+            className="select select-bordered w-36"
+          >
             <option disabled selected className="font-semibold">
               Filter By
             </option>
-            <option>Han Solo</option>
-            <option>Greedo</option>
+            <option value="remote">remote</option>
+            <option value="on-site">on-site</option>
           </select>
         </div>
         <div>
