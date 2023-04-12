@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import "./JobDetails.css";
+import { addToDb, getShoppingCart } from "../../utilities/fakedb";
 const JobDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
+  const [cart, setCart] = useState([]);
   const {
     jobDescription,
     jobResponsibility,
@@ -14,8 +16,7 @@ const JobDetails = () => {
     location,
     contactInformation,
   } = data;
-  // console.log(contactInformation);
-  
+
   const details = useLoaderData();
   useEffect(() => {
     if (details) {
@@ -23,8 +24,25 @@ const JobDetails = () => {
       setData(veiwDetails);
     }
   }, [details, id]);
+
+
+  const handleAddToCart = (product) => {
+    let newCart = [];
+    // const newCart = [...cart, product];
+    const exists = cart.find((pd) => pd.id === product.id);
+    if (!exists) {
+      product.quantity = 1;
+      newCart = [...cart, product];
+    } else {
+      exists.quantity = exists.quantity + 1;
+      const remaining = cart.filter((pd) => pd.id !== product.id);
+      newCart = [...remaining, exists];
+    }
+    setCart(newCart);
+    addToDb(product.id);
+  };
   return (
-    <div className="mb-20 md:mb-32">
+    <div className="mb-32">
       <div className="text-center pt-12 pb-32 navbar-background">
         <h2 className="font-extrabold text-3xl relative">Job Details</h2>
         <img
@@ -39,7 +57,7 @@ const JobDetails = () => {
           alt=""
         />
       </div>
-      <div className="md:flex justify-between gap-5 mx-4 md:mx-40 mt-5 md:mt-32">
+      <div className="md:flex justify-between gap-5 mx-4 md:mx-40 mt-20 md:mt-32">
         <div className="w-3/5">
           <p>
             <span className="font-extrabold text-base">Job Description: </span>{" "}
@@ -130,7 +148,9 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-          <button className="job-details-apply-btn py-4 text-white font-extrabold text-xl mt-11 w-full rounded-lg">Apply Now</button>
+          <button onClick={() => handleAddToCart(data)} className="job-details-apply-btn py-4 text-white font-extrabold text-xl mt-11 w-full rounded-lg">
+            Apply Now
+          </button>
         </div>
       </div>
     </div>
