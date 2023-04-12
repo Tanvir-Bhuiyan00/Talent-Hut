@@ -5,7 +5,23 @@ import JobCard from "../JobCard/JobCard";
 const AppliedJobs = () => {
   const appliedJobs = useLoaderData();
   const [jobs, setJobs] = useState(appliedJobs);
+  const [filter, setFilter] = useState("");
 
+  const handleFilerChange = (e) => {
+    setFilter(e.target.value);
+  };
+
+  const filteredJobs = jobs.filter((job) => {
+    if (filter === "") {
+      return true;
+    } else if (filter === "Onsite") {
+      return job.remoteOrOnsite === "Onsite";
+    } else if (filter === "Remote") {
+      return job.remoteOrOnsite === "Remote";
+    } else {
+      return true;
+    }
+  });
 
   return (
     <div className="mb-32">
@@ -27,16 +43,18 @@ const AppliedJobs = () => {
         <div className="text-right mb-8">
           <select
             className="select select-bordered w-36"
+            value={filter}
+            onChange={handleFilerChange}
           >
-            <option disabled selected className="font-semibold">
+            <option  selected value="" className="font-semibold">
               Filter By
             </option>
-            <option value="remote">remote</option>
-            <option value="on-site">on-site</option>
+            <option value="Remote">remote</option>
+            <option value="Onsite">on-site</option>
           </select>
         </div>
         <div>
-          {jobs.map((job) => (
+          {filteredJobs.map((job) => (
             <JobCard key={job.id} job={job}></JobCard>
           ))}
         </div>

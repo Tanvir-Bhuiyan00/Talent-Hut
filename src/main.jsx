@@ -10,6 +10,7 @@ import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
 import cartProductsLoader from "./loaders/cartProductsLoader";
 import Statistics from "./components/Statistics/Statistics";
 import Blog from "./components/Blog/Blog";
+import NotFound from "./components/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,10 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog></Blog>
-        
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>
       }
     ],
   },
